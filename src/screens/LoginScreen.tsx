@@ -6,7 +6,7 @@ import Header from '../components/Header';
 import Button from '../components/Button';
 import TextInput from '../components/TextInput';
 import { theme } from '../core/theme';
-import { emailValidator, passwordValidator } from '../core/utils';
+import { IDValidator, passwordValidator } from '../core/utils';
 import { Navigation } from '../types';
 
 type Props = {
@@ -14,15 +14,15 @@ type Props = {
 };
 
 const LoginScreen = ({ navigation }: Props) => {
-  const [email, setEmail] = useState({ value: '', error: '' });
+  const [IdStudent, setIdStudent] = useState({ value: '', error: '' });
   const [password, setPassword] = useState({ value: '', error: '' });
 
   const _onLoginPressed = () => {
-    const emailError = emailValidator(email.value);
+    const IdError = IDValidator(IdStudent.value);
     const passwordError = passwordValidator(password.value);
 
-    if (emailError || passwordError) {
-      setEmail({ ...email, error: emailError });
+    if (IdError || passwordError) {
+      setIdStudent({ ...IdStudent, error: IdError });
       setPassword({ ...password, error: passwordError });
       return;
     }
@@ -38,15 +38,11 @@ const LoginScreen = ({ navigation }: Props) => {
 
       <TextInput
         label="N° de documento"
-        returnKeyType="next"
-        value={email.value}
-        onChangeText={text => setEmail({ value: text, error: '' })}
-        error={!!email.error}
-        errorText={email.error}
-        autoCapitalize="none"
-        autoCompleteType="email"
-        textContentType="emailAddress"
-        keyboardType="email-address"
+        keyboardType="numeric"
+        value={IdStudent.value}
+        onChangeText={text => setIdStudent({ value: text, error: '' })}
+        error={!!IdStudent.error}
+        errorText={IdStudent.error}
       />
 
       <TextInput
