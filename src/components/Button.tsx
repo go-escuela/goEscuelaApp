@@ -1,9 +1,9 @@
-import React, { memo } from 'react';
-import { StyleSheet } from 'react-native';
-import { Button as PaperButton } from 'react-native-paper';
-import { theme } from '../core/theme';
+import React, { memo } from 'react'
+import { StyleSheet } from 'react-native'
+import { Button as PaperButton } from 'react-native-paper'
+import { theme } from '../core/theme'
 
-type Props = React.ComponentProps<typeof PaperButton>;
+type Props = React.ComponentProps<typeof PaperButton>
 
 const Button = ({ mode, style, children, ...props }: Props) => (
   <PaperButton
@@ -18,7 +18,7 @@ const Button = ({ mode, style, children, ...props }: Props) => (
   >
     {children}
   </PaperButton>
-);
+)
 
 const styles = StyleSheet.create({
   button: {
@@ -30,6 +30,6 @@ const styles = StyleSheet.create({
     fontSize: 15,
     lineHeight: 26,
   },
-});
+})
 
-export default memo(Button);
+export default memo(Button)

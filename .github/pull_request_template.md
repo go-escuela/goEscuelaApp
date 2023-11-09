@@ -8,7 +8,5 @@ Please make sure the following are checked before sending the PR for review.
 
 - [ ] All PR checks have succeeded.
 
-
 [conventional commits]: ../README.md#Commits-and-Versioning
-
 [commits and versioning]: ../README.md#commits-and-versioning

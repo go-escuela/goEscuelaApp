@@ -11,7 +11,9 @@ mobile app for Go escuela project
 ## Contributing
 
 ### Branching model
+
 This repository only uses `main` branch, therefore every feature is expected to be created from `main` branch.
+
 > IMPORTANT: This repository requires linear commit history, only **rebase** is allowed when updating your branch with latest changes from other branches.
 >
 > **merge commits are strongly discouraged as they can't be merged.**
@@ -19,7 +21,6 @@ This repository only uses `main` branch, therefore every feature is expected to 
 ### Commits and Versioning
 
 Commits should follow [Conventional commits](https://www.conventionalcommits.org/) in order for release automation to bump versions accordingly.
-
 
 ### Styleguide and Best Practices
 
