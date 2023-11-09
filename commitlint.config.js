@@ -21,6 +21,6 @@ module.exports = {
         "chore", // Update build tasks, package manage configs, etc
       ],
     ],
-    "scope-enum": [2, "always", ["settings", "styles", "plugins"]],
+    "scope-enum": [2, "always", ["settings", "styles", "plugins", "docs"]],
   },
 };
